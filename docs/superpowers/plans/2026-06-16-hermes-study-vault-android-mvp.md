@@ -104,6 +104,7 @@ Create tests:
 - Create: `build.gradle.kts`
 - Create: `gradle/libs.versions.toml`
 - Create: `gradle/wrapper/gradle-wrapper.properties`
+- Create: `gradle.properties`
 - Create: `app/build.gradle.kts`
 - Create: `app/src/main/AndroidManifest.xml`
 - Create: `app/src/main/java/com/hermes/studyvault/MainActivity.kt`
@@ -143,7 +144,6 @@ Create `build.gradle.kts`:
 ```kotlin
 plugins {
     alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.ksp) apply false
 }
@@ -157,7 +157,7 @@ Create `gradle/libs.versions.toml`:
 [versions]
 agp = "9.2.0"
 kotlin = "2.4.0"
-ksp = "2.4.0-2.0.0"
+ksp = "2.3.9"
 composeBom = "2026.04.01"
 coreKtx = "1.17.0"
 activityCompose = "1.11.0"
@@ -195,7 +195,6 @@ androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", vers
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 ```
@@ -214,14 +213,23 @@ zipStoreBase=GRADLE_USER_HOME
 zipStorePath=wrapper/dists
 ```
 
-- [ ] **Step 5: Create Android app build file**
+- [ ] **Step 5: Create Gradle runtime properties**
+
+Create `gradle.properties`:
+
+```properties
+org.gradle.jvmargs=-Xmx4096m -Dfile.encoding=UTF-8
+org.gradle.parallel=true
+android.useAndroidX=true
+```
+
+- [ ] **Step 6: Create Android app build file**
 
 Create `app/build.gradle.kts`:
 
 ```kotlin
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
 }
@@ -295,7 +303,7 @@ dependencies {
 }
 ```
 
-- [ ] **Step 6: Create manifest**
+- [ ] **Step 7: Create manifest**
 
 Create `app/src/main/AndroidManifest.xml`:
 
@@ -364,7 +372,7 @@ Also create minimal resource files:
 </data-extraction-rules>
 ```
 
-- [ ] **Step 7: Create Compose entry point**
+- [ ] **Step 8: Create Compose entry point**
 
 Create `app/src/main/java/com/hermes/studyvault/MainActivity.kt`:
 
@@ -440,7 +448,7 @@ fun HermesStudyVaultTheme(content: @Composable () -> Unit) {
 }
 ```
 
-- [ ] **Step 8: Verify project skeleton builds**
+- [ ] **Step 9: Verify project skeleton builds**
 
 Run:
 
@@ -461,7 +469,7 @@ Expected after wrapper creation: `BUILD SUCCESSFUL`.
 
 If the command fails because Android SDK is missing, install Android SDK Platform 37 and set `ANDROID_HOME`, then rerun the command.
 
-- [ ] **Step 9: Commit**
+- [ ] **Step 10: Commit**
 
 ```powershell
 git add settings.gradle.kts build.gradle.kts gradle app
