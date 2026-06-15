@@ -1,8 +1,10 @@
 package com.hermes.studyvault.data.repository
 
 import com.hermes.studyvault.data.local.StudyVaultDatabase
+import com.hermes.studyvault.data.local.entity.DeadlineEntity
 import com.hermes.studyvault.data.local.entity.EvidenceBlockEntity
 import com.hermes.studyvault.data.local.entity.NoteEntity
+import com.hermes.studyvault.data.local.entity.ReviewCardEntity
 import com.hermes.studyvault.data.local.entity.SourceEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -25,5 +27,13 @@ class RoomVaultRepository(
 
     override suspend fun getNotesOnce(): List<NoteEntity> {
         return database.noteDao().getAllOnce()
+    }
+
+    override suspend fun getDeadlinesOnce(): List<DeadlineEntity> {
+        return database.deadlineDao().getAllOnce()
+    }
+
+    override suspend fun getReviewCardsOnce(): List<ReviewCardEntity> {
+        return database.reviewCardDao().getAllOnce()
     }
 }

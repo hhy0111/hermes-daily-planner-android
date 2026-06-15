@@ -1,7 +1,9 @@
 package com.hermes.studyvault.domain.share
 
 import com.hermes.studyvault.data.local.entity.EvidenceBlockEntity
+import com.hermes.studyvault.data.local.entity.DeadlineEntity
 import com.hermes.studyvault.data.local.entity.NoteEntity
+import com.hermes.studyvault.data.local.entity.ReviewCardEntity
 import com.hermes.studyvault.data.local.entity.SourceEntity
 import com.hermes.studyvault.data.repository.VaultRepository
 import kotlinx.coroutines.flow.Flow
@@ -50,5 +52,9 @@ class CreateSourceFromShareUseCaseTest {
         override suspend fun getEvidenceBlocksOnce(): List<EvidenceBlockEntity> = emptyList()
 
         override suspend fun getNotesOnce(): List<NoteEntity> = emptyList()
+
+        override suspend fun getDeadlinesOnce(): List<DeadlineEntity> = emptyList()
+
+        override suspend fun getReviewCardsOnce(): List<ReviewCardEntity> = emptyList()
     }
 }
