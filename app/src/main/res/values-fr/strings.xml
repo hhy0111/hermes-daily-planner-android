@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Planificateur quotidien Hermes</string>
+    <string name="settings">Paramètres</string>
+    <string name="back">Retour</string>
+    <string name="language">Langue</string>
+    <string name="system_default">Valeur système</string>
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_body">Planificateur quotidien Hermes language settings.</string>
+    <string name="tab_today">Aujourd’hui</string>
+    <string name="tab_inbox">Tâches</string>
+    <string name="tab_vault">Listes</string>
+    <string name="tab_write">Notes rapides</string>
+    <string name="tab_review">Terminé</string>
+    <string name="today_focus_title">Plan du jour</string>
+    <string name="today_focus_body">Tâches, rendez-vous et notes du jour.</string>
+    <string name="inbox_title">Tâches</string>
+    <string name="inbox_body">Tâches, rendez-vous et notes du jour.</string>
+    <string name="vault_title">Listes</string>
+    <string name="vault_body">Tâches, rendez-vous et notes du jour.</string>
+    <string name="write_title">Notes rapides</string>
+    <string name="write_body">Tâches, rendez-vous et notes du jour.</string>
+    <string name="review_title">Terminé</string>
+    <string name="review_body">Tâche terminée.</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Hermes 日程规划器</string>
+    <string name="settings">设置</string>
+    <string name="back">返回</string>
+    <string name="language">语言</string>
+    <string name="system_default">系统默认</string>
+    <string name="settings_title">设置</string>
+    <string name="settings_body">选择规划器使用的应用语言。</string>
+    <string name="tab_today">今天</string>
+    <string name="tab_inbox">任务</string>
+    <string name="tab_vault">清单</string>
+    <string name="tab_write">笔记</string>
+    <string name="tab_review">完成</string>
+    <string name="today_focus_title">今日计划</string>
+    <string name="today_focus_body">整理今天的任务、日程和笔记。</string>
+    <string name="inbox_title">任务收集箱</string>
+    <string name="inbox_body">添加任务、链接、文件、图片和快速笔记。</string>
+    <string name="vault_title">清单</string>
+    <string name="vault_body">搜索任务、完成项、笔记、标签和附件。</string>
+    <string name="write_title">笔记</string>
+    <string name="write_body">保留与任务和日程相关的快速笔记。</string>
+    <string name="review_title">完成</string>
+    <string name="review_body">已完成任务会显示在这里，可重新打开或参考。</string>
+</resources>

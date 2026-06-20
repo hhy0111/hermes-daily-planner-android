@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Planner giornaliero Hermes</string>
+    <string name="settings">Impostazioni</string>
+    <string name="back">Indietro</string>
+    <string name="language">Lingua</string>
+    <string name="system_default">Predefinito di sistema</string>
+    <string name="settings_title">Impostazioni</string>
+    <string name="settings_body">Planner giornaliero Hermes language settings.</string>
+    <string name="tab_today">Oggi</string>
+    <string name="tab_inbox">Attività</string>
+    <string name="tab_vault">Liste</string>
+    <string name="tab_write">Note</string>
+    <string name="tab_review">Fatto</string>
+    <string name="today_focus_title">Piano di oggi</string>
+    <string name="today_focus_body">Attività, appuntamenti e note del giorno.</string>
+    <string name="inbox_title">Attività</string>
+    <string name="inbox_body">Attività, appuntamenti e note del giorno.</string>
+    <string name="vault_title">Liste</string>
+    <string name="vault_body">Attività, appuntamenti e note del giorno.</string>
+    <string name="write_title">Note</string>
+    <string name="write_body">Attività, appuntamenti e note del giorno.</string>
+    <string name="review_title">Fatto</string>
+    <string name="review_body">Attività completata.</string>
+</resources>

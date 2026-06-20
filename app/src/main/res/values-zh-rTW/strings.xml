@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Hermes 每日規劃器</string>
+    <string name="settings">設定</string>
+    <string name="back">返回</string>
+    <string name="language">語言</string>
+    <string name="system_default">系統預設</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_body">選擇規劃器使用的應用程式語言。</string>
+    <string name="tab_today">今天</string>
+    <string name="tab_inbox">任務</string>
+    <string name="tab_vault">清單</string>
+    <string name="tab_write">筆記</string>
+    <string name="tab_review">完成</string>
+    <string name="today_focus_title">今日計畫</string>
+    <string name="today_focus_body">整理今天的任務、行程和筆記。</string>
+    <string name="inbox_title">任務收集箱</string>
+    <string name="inbox_body">加入任務、連結、檔案、圖片和快速筆記。</string>
+    <string name="vault_title">清單</string>
+    <string name="vault_body">搜尋任務、完成項目、筆記、標籤和附件。</string>
+    <string name="write_title">筆記</string>
+    <string name="write_body">保留與任務和行程相關的快速筆記。</string>
+    <string name="review_title">完成</string>
+    <string name="review_body">已完成任務會顯示在這裡，可重新開啟或參考。</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Perencana Harian Hermes</string>
+    <string name="settings">Pengaturan</string>
+    <string name="back">Kembali</string>
+    <string name="language">Bahasa</string>
+    <string name="system_default">Bawaan sistem</string>
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_body">Perencana Harian Hermes language settings.</string>
+    <string name="tab_today">Hari ini</string>
+    <string name="tab_inbox">Tugas</string>
+    <string name="tab_vault">Daftar</string>
+    <string name="tab_write">Catatan</string>
+    <string name="tab_review">Selesai</string>
+    <string name="today_focus_title">Rencana Hari Ini</string>
+    <string name="today_focus_body">Tugas, jadwal, dan catatan hari ini.</string>
+    <string name="inbox_title">Tugas</string>
+    <string name="inbox_body">Tugas, jadwal, dan catatan hari ini.</string>
+    <string name="vault_title">Daftar</string>
+    <string name="vault_body">Tugas, jadwal, dan catatan hari ini.</string>
+    <string name="write_title">Catatan</string>
+    <string name="write_body">Tugas, jadwal, dan catatan hari ini.</string>
+    <string name="review_title">Selesai</string>
+    <string name="review_body">Tugas selesai.</string>
+</resources>

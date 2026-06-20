@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hermes Daily Planner Preview</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b4f'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-size='30' font-weight='700' fill='white'%3EH%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="preview-layout">
+      <section class="phone-shell" aria-label="Hermes Daily Planner app preview" data-i18n-aria="appName">
+        <header class="app-header">
+          <div class="brand-lockup">
+            <div class="brand-mark" aria-hidden="true">H</div>
+            <div>
+              <p class="eyebrow" data-i18n="localMvp">Personal planner</p>
+              <h1 data-i18n="appName">Hermes Daily Planner</h1>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button class="settings-link" type="button" data-route="settings" data-settings-open>
+              <span data-i18n="settings">Settings</span>
+            </button>
+            <a
+              class="apk-link"
+              href="../app/build/outputs/apk/debug/app-debug.apk"
+              download
+              data-download-apk
+              data-i18n="installApp"
+            >Install</a>
+          </div>
+        </header>
+
+        <div class="screen-stack">
+          <section class="screen active" id="today" data-panel="today" aria-labelledby="today-title">
+            <h2 id="today-title" data-i18n="todayTitle">Today Plan</h2>
+            <p class="screen-copy" data-i18n="todayBody">Tasks, schedules, and notes for the day.</p>
+            <div class="metric-grid" aria-label="Today summary" data-i18n-aria="todaySummary">
+              <article class="metric">
+                <span class="metric-value" data-captured-count>0</span>
+                <span class="metric-label" data-i18n="capturedSources">open tasks</span>
+              </article>
+              <article class="metric amber">
+                <span class="metric-value" data-review-count>0</span>
+                <span class="metric-label" data-i18n="dueReviewCards">today events</span>
+              </article>
+              <article class="metric blue">
+                <span class="metric-value" data-schedule-count>0</span>
+                <span class="metric-label" data-i18n="scheduleItems">done tasks</span>
+              </article>
+            </div>
+            <div class="action-list" data-today-list></div>
+          </section>
+
+          <section class="screen" id="calendar" data-panel="calendar" aria-labelledby="calendar-title" hidden>
+            <h2 id="calendar-title" data-i18n="calendarTitle">Calendar</h2>
+            <p class="screen-copy" data-i18n="calendarBody">Plan appointments, errands, deadlines, and routines.</p>
+            <div class="calendar-toolbar">
+              <button type="button" data-calendar-prev data-i18n-aria="previousMonth" aria-label="Previous month">&lt;</button>
+              <strong data-calendar-month></strong>
+              <button type="button" data-calendar-next data-i18n-aria="nextMonth" aria-label="Next month">&gt;</button>
+            </div>
+            <div class="calendar-weekdays" data-calendar-weekdays></div>
+            <div class="calendar-grid" data-calendar-grid></div>
+            <button class="primary-action" type="button" data-add-schedule-open data-i18n="addSchedule">Add schedule</button>
+            <form class="source-form" data-schedule-form hidden>
+              <h3 data-i18n="addSchedule">Add schedule</h3>
+              <label>
+                <span data-i18n="sourceTitle">Title</span>
+                <input type="text" data-schedule-title required>
+              </label>
+              <label>
+                <span data-i18n="scheduleDate">Date</span>
+                <input type="date" data-schedule-date required>
+              </label>
+              <label>
+                <span data-i18n="scheduleTime">Time</span>
+                <input type="time" data-schedule-time>
+              </label>
+              <label>
+                <span data-i18n="scheduleReminder">Reminder</span>
+                <select data-schedule-reminder>
+                  <option value="none" data-i18n="reminderNone">No reminder</option>
+                  <option value="0" data-i18n="reminderAtTime">At event time</option>
+                  <option value="10" data-i18n="reminder10">10 minutes before</option>
+                  <option value="30" data-i18n="reminder30">30 minutes before</option>
+                  <option value="60" data-i18n="reminder60">1 hour before</option>
+                  <option value="1440" data-i18n="reminderDay">1 day before</option>
+                </select>
+              </label>
+              <p class="form-hint" data-i18n="browserReminderHint">Browser reminders work while this preview tab is open. Android reminders continue after the app is closed.</p>
+              <label>
+                <span data-i18n="scheduleKind">Schedule type</span>
+                <select data-schedule-kind>
+                  <option value="personal" data-i18n="personalSchedule">Personal</option>
+                  <option value="study" data-i18n="studySession">Work</option>
+                  <option value="exam" data-i18n="examSchedule">Appointment</option>
+                  <option value="assignment" data-i18n="assignmentSchedule">Errand</option>
+                  <option value="deadline" data-i18n="deadlines">deadlines</option>
+                  <option value="routine" data-i18n="routineSchedule">Routine</option>
+                  <option value="meeting" data-i18n="meetingSchedule">Meeting</option>
+                  <option value="other" data-i18n="otherSchedule">Other</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="sourceNote">Note</span>
+                <textarea rows="3" data-schedule-note></textarea>
+              </label>
+              <div class="source-actions">
+                <button type="submit" data-i18n="saveSchedule">Save schedule</button>
+                <button type="button" data-schedule-cancel data-i18n="cancelSource">Cancel</button>
+              </div>
+            </form>
+            <p class="source-feedback" data-schedule-feedback aria-live="polite"></p>
+            <h3 class="section-title" data-i18n="selectedDateSchedule">Selected date</h3>
+            <div class="action-list" data-schedule-list></div>
+          </section>
+
+          <section class="screen" id="vault" data-panel="vault" aria-labelledby="vault-title" hidden>
+            <h2 id="vault-title" data-i18n="vaultTitle">Task List</h2>
+            <p class="screen-copy" data-i18n="vaultBody">Add tasks, filter priorities, and keep attachments together.</p>
+            <button class="primary-action" type="button" data-add-source-open data-i18n="addSharedSource">Add task</button>
+            <form class="source-form" data-source-form hidden>
+              <h3 data-i18n="addSourceTitle">Add task details</h3>
+              <p class="form-hint" data-i18n="taskFormHint">Only the title is required. Add more details when useful.</p>
+              <label>
+                <span data-i18n="sourceTitle">Title</span>
+                <input type="text" data-source-title data-i18n-placeholder="sourceTitlePlaceholder" placeholder="What needs to be done?" required>
+              </label>
+              <label>
+                <span data-i18n="scheduleDate">Date</span>
+                <input type="date" data-source-due-date>
+              </label>
+              <label>
+                <span data-i18n="sourceNote">Details</span>
+                <textarea rows="3" data-source-note data-i18n-placeholder="sourceNotePlaceholder" placeholder="Add context, errands, or next steps."></textarea>
+              </label>
+              <details class="optional-panel">
+                <summary data-i18n="optionalDetails">More options</summary>
+                <label>
+                  <span data-i18n="sourceTags">Category</span>
+                  <select data-source-tags>
+                    <option value="personal" data-i18n="personalSchedule">Personal</option>
+                    <option value="work" data-i18n="studySession">Work</option>
+                    <option value="errand" data-i18n="assignmentSchedule">Errand</option>
+                    <option value="meeting" data-i18n="meetingSchedule">Meeting</option>
+                    <option value="routine" data-i18n="routineSchedule">Routine</option>
+                    <option value="other" data-i18n="otherSchedule">Other</option>
+                  </select>
+                </label>
+                <label>
+                  <span data-i18n="taskPriority">Priority</span>
+                  <select data-source-priority>
+                    <option value="normal" data-i18n="priorityNormal">Normal</option>
+                    <option value="high" data-i18n="priorityHigh">High</option>
+                    <option value="low" data-i18n="priorityLow">Low</option>
+                  </select>
+                </label>
+                <label>
+                  <span data-i18n="taskRepeat">Repeat</span>
+                  <select data-source-repeat>
+                    <option value="none" data-i18n="repeatNone">None</option>
+                    <option value="daily" data-i18n="repeatDaily">Daily</option>
+                    <option value="weekly" data-i18n="repeatWeekly">Weekly</option>
+                    <option value="monthly" data-i18n="repeatMonthly">Monthly</option>
+                  </select>
+                </label>
+                <label>
+                  <span data-i18n="sourceType">Attachment</span>
+                  <select data-source-type>
+                    <option value="TASK" data-i18n="sourceKindText">No attachment</option>
+                    <option value="LINK" data-i18n="sourceKindLink">Link</option>
+                    <option value="PDF" data-i18n="sourceKindPdf">File</option>
+                    <option value="IMG" data-i18n="sourceKindImage">Image</option>
+                  </select>
+                </label>
+                <label data-source-field="LINK" hidden>
+                  <span data-i18n="sourceUrl">URL</span>
+                  <input type="url" data-source-url>
+                </label>
+                <label data-source-field="PDF" hidden>
+                  <span data-i18n="sourceFileName">Upload file</span>
+                  <input type="file" data-source-file>
+                </label>
+                <div class="image-preview" data-source-file-preview hidden></div>
+                <label data-source-field="PDF" hidden>
+                  <span data-i18n="sourcePage">File note</span>
+                  <input type="text" data-source-page>
+                </label>
+                <label data-source-field="IMG" hidden>
+                  <span data-i18n="sourceImageFile">Image file</span>
+                  <input type="file" accept="image/*" data-source-image-file>
+                </label>
+                <div class="image-preview" data-source-image-preview hidden></div>
+                <label data-source-field="IMG" hidden>
+                  <span data-i18n="sourceImageDescription">Image note</span>
+                  <textarea rows="3" data-source-image></textarea>
+                </label>
+              </details>
+              <div class="source-actions">
+                <button type="submit" data-i18n="saveSource">Save task</button>
+                <button type="button" data-source-cancel data-i18n="cancelSource">Cancel</button>
+              </div>
+            </form>
+            <p class="source-feedback" data-source-feedback aria-live="polite"></p>
+            <div class="filter-row" role="group" aria-label="Task filters" data-i18n-aria="taskFilters">
+              <button class="active" type="button" data-vault-filter="all" data-i18n="filterAll">All</button>
+              <button type="button" data-vault-filter="open" data-i18n="filterOpen">Open</button>
+              <button type="button" data-vault-filter="today" data-i18n="filterToday">Today</button>
+              <button type="button" data-vault-filter="important" data-i18n="filterImportant">Important</button>
+              <button type="button" data-vault-filter="done" data-i18n="filterDone">Done</button>
+            </div>
+            <label class="search-box">
+              <span data-i18n="search">Search</span>
+              <input type="search" value="" aria-label="Search lists" data-i18n-aria="searchVault" data-vault-search>
+            </label>
+            <div class="action-list" data-vault-results></div>
+          </section>
+
+          <section class="screen" id="write" data-panel="write" aria-labelledby="write-title" hidden>
+            <h2 id="write-title" data-i18n="writeTitle">Notes</h2>
+            <p class="screen-copy" data-i18n="writeBody">Keep quick notes connected to tasks and schedules.</p>
+            <form class="note-form" data-note-form>
+              <label>
+                <span data-i18n="noteTitle">Note title</span>
+                <input type="text" data-note-title required>
+              </label>
+              <label>
+                <span data-i18n="evidenceSource">Related task</span>
+                <select data-note-source></select>
+              </label>
+              <label>
+                <span data-i18n="noteBody">Note body</span>
+                <textarea rows="6" data-note-body required></textarea>
+              </label>
+              <div class="source-actions">
+                <button type="submit" data-i18n="saveNote">Save note</button>
+                <button type="button" data-export-markdown data-i18n="exportMarkdown">Export Markdown</button>
+              </div>
+            </form>
+            <p class="source-feedback" data-note-feedback aria-live="polite"></p>
+            <h3 class="section-title" data-i18n="savedNotes">Saved notes</h3>
+            <div class="action-list" data-note-list></div>
+          </section>
+
+          <section class="screen" id="review" data-panel="review" aria-labelledby="review-title" hidden>
+            <h2 id="review-title" data-i18n="reviewTitle">Done</h2>
+            <p class="screen-copy" data-i18n="reviewBody">Completed tasks appear here so you can reopen or reference them.</p>
+            <div class="action-list" data-completed-list></div>
+            <p class="source-feedback" data-review-feedback aria-live="polite"></p>
+          </section>
+
+          <section class="screen" id="settings" data-panel="settings" aria-labelledby="settings-title" hidden>
+            <h2 id="settings-title" data-i18n="settings">Settings</h2>
+            <p class="screen-copy" data-i18n="settingsBody">Choose the app language used across the planner.</p>
+            <label class="language-select">
+              <span data-i18n="language">Language</span>
+              <select data-language-select aria-label="Language" data-i18n-aria="language">
+                <option value="system" data-i18n="systemDefault">System Default</option>
+                <option value="en">English</option>
+                <option value="ko">한국어</option>
+                <option value="ja">日本語</option>
+                <option value="zh-CN">简体中文</option>
+                <option value="zh-TW">繁體中文</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
+                <option value="ru">Русский</option>
+                <option value="ar">العربية</option>
+                <option value="hi">हिन्दी</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="th">ไทย</option>
+                <option value="tr">Türkçe</option>
+              </select>
+            </label>
+            <button class="secondary-action" type="button" data-show-guide data-i18n="showGuide">Show guide</button>
+            <button class="secondary-action" type="button" data-reset-data data-i18n="resetPreviewData">Reset preview data</button>
+            <p class="source-feedback" data-settings-feedback aria-live="polite"></p>
+          </section>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Main destinations" data-i18n-aria="mainDestinations">
+          <button class="nav-item active" type="button" data-route="today" aria-current="page">
+            <span aria-hidden="true" data-i18n-initial="today">T</span>
+            <span data-i18n="today">Today</span>
+          </button>
+          <button class="nav-item" type="button" data-route="calendar">
+            <span aria-hidden="true" data-i18n-initial="calendar">C</span>
+            <span data-i18n="calendar">Calendar</span>
+          </button>
+          <button class="nav-item" type="button" data-route="vault">
+            <span aria-hidden="true" data-i18n-initial="vault">V</span>
+            <span data-i18n="vault">Task List</span>
+          </button>
+          <button class="nav-item" type="button" data-route="write">
+            <span aria-hidden="true" data-i18n-initial="write">W</span>
+            <span data-i18n="write">Notes</span>
+          </button>
+          <button class="nav-item" type="button" data-route="review">
+            <span aria-hidden="true" data-i18n-initial="review">R</span>
+            <span data-i18n="review">Done</span>
+          </button>
+        </nav>
+      </section>
+
+      <aside class="preview-notes" aria-label="Preview notes" data-i18n-aria="browserReview">
+        <p class="eyebrow" data-i18n="browserReview">Browser review</p>
+        <h2 data-i18n="previewTitle">Check the MVP flow without installing first.</h2>
+        <p data-i18n="previewBody">
+          This local preview mirrors the current Android MVP destinations and keeps the debug APK
+          available from the app header.
+        </p>
+        <div class="note-row">
+          <span data-i18n="build">Build</span>
+          <strong data-i18n="debugReady">Debug APK ready</strong>
+        </div>
+        <div class="note-row">
+          <span data-i18n="scope">Scope</span>
+          <strong data-i18n="phaseOne">Phase 1 local MVP</strong>
+        </div>
+      </aside>
+    </main>
+    <section class="onboarding-overlay" data-onboarding hidden>
+      <div class="onboarding-dialog" role="dialog" aria-modal="true" aria-labelledby="onboarding-title">
+        <p class="eyebrow" data-i18n="localMvp">Personal planner</p>
+        <h2 id="onboarding-title" data-i18n="onboardingTitle">Start with three steps</h2>
+        <p data-i18n="onboardingBody">Add a task, schedule the important things, then check them off as your day moves.</p>
+        <ol class="onboarding-steps">
+          <li data-i18n="onboardingCapture">Add a task with a title and date first.</li>
+          <li data-i18n="calendarBody">Plan appointments, errands, deadlines, and routines.</li>
+          <li data-i18n="onboardingVault">Use Task List filters for today, important, and done items.</li>
+          <li data-i18n="onboardingWriteReview">Mark tasks done and keep notes connected to your work.</li>
+        </ol>
+        <div class="onboarding-actions">
+          <button type="button" data-onboarding-start data-i18n="onboardingStart">Start in Task List</button>
+          <button type="button" data-onboarding-dismiss data-i18n="onboardingDismiss">Got it</button>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

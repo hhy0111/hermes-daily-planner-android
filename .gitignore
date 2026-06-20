@@ -5,3 +5,7 @@ local.properties
 build/
 app/build/
 *.hprof
+.playwright-cli/
+output/
+*.jks
+*.keystore

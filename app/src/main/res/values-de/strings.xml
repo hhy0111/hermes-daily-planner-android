@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Hermes Tagesplaner</string>
+    <string name="settings">Einstellungen</string>
+    <string name="back">Zurück</string>
+    <string name="language">Sprache</string>
+    <string name="system_default">Systemstandard</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_body">Hermes Tagesplaner language settings.</string>
+    <string name="tab_today">Heute</string>
+    <string name="tab_inbox">Aufgaben</string>
+    <string name="tab_vault">Listen</string>
+    <string name="tab_write">Notizen</string>
+    <string name="tab_review">Erledigt</string>
+    <string name="today_focus_title">Tagesplan</string>
+    <string name="today_focus_body">Aufgaben, Termine und Notizen für heute.</string>
+    <string name="inbox_title">Aufgaben</string>
+    <string name="inbox_body">Aufgaben, Termine und Notizen für heute.</string>
+    <string name="vault_title">Listen</string>
+    <string name="vault_body">Aufgaben, Termine und Notizen für heute.</string>
+    <string name="write_title">Notizen</string>
+    <string name="write_body">Aufgaben, Termine und Notizen für heute.</string>
+    <string name="review_title">Erledigt</string>
+    <string name="review_body">Aufgabe erledigt.</string>
+</resources>

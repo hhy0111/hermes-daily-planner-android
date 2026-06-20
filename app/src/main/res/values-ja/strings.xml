@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Hermesデイリープランナー</string>
+    <string name="settings">設定</string>
+    <string name="back">戻る</string>
+    <string name="language">言語</string>
+    <string name="system_default">システム既定</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_body">プランナー全体で使う言語を選択します。</string>
+    <string name="tab_today">今日</string>
+    <string name="tab_inbox">タスク</string>
+    <string name="tab_vault">リスト</string>
+    <string name="tab_write">メモ</string>
+    <string name="tab_review">完了</string>
+    <string name="today_focus_title">今日の計画</string>
+    <string name="today_focus_body">今日のタスク、予定、メモを整理します。</string>
+    <string name="inbox_title">タスク受信箱</string>
+    <string name="inbox_body">タスク、リンク、ファイル、画像、簡単なメモを追加します。</string>
+    <string name="vault_title">リスト</string>
+    <string name="vault_body">タスク、完了項目、メモ、タグ、添付を検索します。</string>
+    <string name="write_title">メモ</string>
+    <string name="write_body">タスクや予定に関連する簡単なメモを残します。</string>
+    <string name="review_title">完了</string>
+    <string name="review_body">完了タスクを再開したり参照できます。</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Hermes Daily Planner</string>
+    <string name="settings">Cài đặt</string>
+    <string name="back">Quay lại</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="system_default">Mặc định hệ thống</string>
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_body">Hermes Daily Planner language settings.</string>
+    <string name="tab_today">Hôm nay</string>
+    <string name="tab_inbox">Việc cần làm</string>
+    <string name="tab_vault">Danh sách</string>
+    <string name="tab_write">Ghi chú</string>
+    <string name="tab_review">Hoàn tất</string>
+    <string name="today_focus_title">Kế hoạch hôm nay</string>
+    <string name="today_focus_body">Việc cần làm, lịch và ghi chú trong ngày.</string>
+    <string name="inbox_title">Việc cần làm</string>
+    <string name="inbox_body">Việc cần làm, lịch và ghi chú trong ngày.</string>
+    <string name="vault_title">Danh sách</string>
+    <string name="vault_body">Việc cần làm, lịch và ghi chú trong ngày.</string>
+    <string name="write_title">Ghi chú</string>
+    <string name="write_body">Việc cần làm, lịch và ghi chú trong ngày.</string>
+    <string name="review_title">Hoàn tất</string>
+    <string name="review_body">Việc đã hoàn tất.</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Hermes Daily Planner</string>
+    <string name="settings">การตั้งค่า</string>
+    <string name="back">กลับ</string>
+    <string name="language">ภาษา</string>
+    <string name="system_default">ค่าเริ่มต้นระบบ</string>
+    <string name="settings_title">การตั้งค่า</string>
+    <string name="settings_body">Hermes Daily Planner language settings.</string>
+    <string name="tab_today">วันนี้</string>
+    <string name="tab_inbox">งาน</string>
+    <string name="tab_vault">รายการ</string>
+    <string name="tab_write">บันทึก</string>
+    <string name="tab_review">เสร็จแล้ว</string>
+    <string name="today_focus_title">แผนวันนี้</string>
+    <string name="today_focus_body">งาน กำหนดการ และบันทึกของวันนี้</string>
+    <string name="inbox_title">งาน</string>
+    <string name="inbox_body">งาน กำหนดการ และบันทึกของวันนี้</string>
+    <string name="vault_title">รายการ</string>
+    <string name="vault_body">งาน กำหนดการ และบันทึกของวันนี้</string>
+    <string name="write_title">บันทึก</string>
+    <string name="write_body">งาน กำหนดการ และบันทึกของวันนี้</string>
+    <string name="review_title">เสร็จแล้ว</string>
+    <string name="review_body">งานเสร็จแล้ว</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">مخطط Hermes اليومي</string>
+    <string name="settings">الإعدادات</string>
+    <string name="back">رجوع</string>
+    <string name="language">اللغة</string>
+    <string name="system_default">افتراضي النظام</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_body">مخطط Hermes اليومي language settings.</string>
+    <string name="tab_today">اليوم</string>
+    <string name="tab_inbox">المهام</string>
+    <string name="tab_vault">القوائم</string>
+    <string name="tab_write">الملاحظات</string>
+    <string name="tab_review">تم</string>
+    <string name="today_focus_title">خطة اليوم</string>
+    <string name="today_focus_body">مهام اليوم وجدوله وملاحظاته.</string>
+    <string name="inbox_title">المهام</string>
+    <string name="inbox_body">مهام اليوم وجدوله وملاحظاته.</string>
+    <string name="vault_title">القوائم</string>
+    <string name="vault_body">مهام اليوم وجدوله وملاحظاته.</string>
+    <string name="write_title">الملاحظات</string>
+    <string name="write_body">مهام اليوم وجدوله وملاحظاته.</string>
+    <string name="review_title">تم</string>
+    <string name="review_body">اكتملت المهمة.</string>
+</resources>

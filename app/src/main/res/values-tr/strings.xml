@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Hermes Günlük Planlayıcı</string>
+    <string name="settings">Ayarlar</string>
+    <string name="back">Geri</string>
+    <string name="language">Dil</string>
+    <string name="system_default">Sistem varsayılanı</string>
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_body">Hermes Günlük Planlayıcı language settings.</string>
+    <string name="tab_today">Bugün</string>
+    <string name="tab_inbox">Görevler</string>
+    <string name="tab_vault">Listeler</string>
+    <string name="tab_write">Notlar</string>
+    <string name="tab_review">Bitti</string>
+    <string name="today_focus_title">Bugün Planı</string>
+    <string name="today_focus_body">Günün görevleri, takvimi ve notları.</string>
+    <string name="inbox_title">Görevler</string>
+    <string name="inbox_body">Günün görevleri, takvimi ve notları.</string>
+    <string name="vault_title">Listeler</string>
+    <string name="vault_body">Günün görevleri, takvimi ve notları.</string>
+    <string name="write_title">Notlar</string>
+    <string name="write_body">Günün görevleri, takvimi ve notları.</string>
+    <string name="review_title">Bitti</string>
+    <string name="review_body">Görev tamamlandı.</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ежедневный планировщик Hermes</string>
+    <string name="settings">Настройки</string>
+    <string name="back">Назад</string>
+    <string name="language">Язык</string>
+    <string name="system_default">Системное значение</string>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_body">Ежедневный планировщик Hermes language settings.</string>
+    <string name="tab_today">Сегодня</string>
+    <string name="tab_inbox">Задачи</string>
+    <string name="tab_vault">Списки</string>
+    <string name="tab_write">Заметки</string>
+    <string name="tab_review">Готово</string>
+    <string name="today_focus_title">План на день</string>
+    <string name="today_focus_body">Задачи, расписание и заметки на день.</string>
+    <string name="inbox_title">Задачи</string>
+    <string name="inbox_body">Задачи, расписание и заметки на день.</string>
+    <string name="vault_title">Списки</string>
+    <string name="vault_body">Задачи, расписание и заметки на день.</string>
+    <string name="write_title">Заметки</string>
+    <string name="write_body">Задачи, расписание и заметки на день.</string>
+    <string name="review_title">Готово</string>
+    <string name="review_body">Задача выполнена.</string>
+</resources>
