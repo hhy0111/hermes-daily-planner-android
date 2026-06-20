@@ -34,6 +34,15 @@ class ReleaseConfigurationTest {
     }
 
     @Test
+    fun firstPublicReleaseUsesProductionVersionName() {
+        val buildFile = projectFile("build.gradle.kts", "app/build.gradle.kts")
+        val source = buildFile.readText()
+
+        assertTrue(source.contains("""versionCode = 1"""))
+        assertTrue(source.contains("""versionName = "1.0.0""""))
+    }
+
+    @Test
     fun releaseSigningCanBeConfiguredWithoutCommittingSecrets() {
         val buildFile = projectFile("build.gradle.kts", "app/build.gradle.kts")
         val source = buildFile.readText()
